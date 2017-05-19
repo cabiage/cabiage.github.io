@@ -1,0 +1,52 @@
+.clearfix::after{
+	content: "";
+	display: block;
+	clear:both;
+}
+p{
+	color: #fff;
+}
+h1{
+	color:#fff
+}
+header{
+	width: 900px;
+	margin: auto;
+	position: relative;
+}
+header img{
+	max-width: 120px;
+}
+#test{
+	background: url(../img/5.jpg) ;
+	background-size:100%;
+}
+nav ul li{
+	list-style-type: none;
+	padding: 0;
+}
+.xiaofu{
+	position: absolute;
+	right:0px;
+	top:0px;、
+	max-width:900px;
+     margin: 30px auto;
+}
+.xiaofu li{	
+	float:left;
+}
+.xiaofu li a{
+	text-decoration: none;
+	color: #FFFFFF;
+	margin: 20px 10px;
+	padding: 10px;
+	border: 1px solid transparent;
+	transition: all .4s;
+}
+.xiaofu li a:hover{
+	color: fuchsia;
+	border: 1px solid #FFFFFF;
+}
+.fuck{
+	right:0;
+}
