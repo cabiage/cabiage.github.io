@@ -1,0 +1,182 @@
+.clearfix::after{
+	content: "";
+	clear:both;
+	display: table;
+}
+.wrapper{
+	max-width: 1200px;
+	margin: auto;
+}
+body{
+    background: url(../img/u=2483348597,1831098538&fm=23&gp=0.jpg) center top fixed;
+    min-height: 1200px;
+    background-size:cover ;
+    }
+.logo img{
+	width: 100px;
+	height: auto;
+}
+header{
+	margin: 40px 0px;
+	position: relative;
+}
+ul{
+
+	list-style-type: none;
+	padding:0px;
+
+}
+.logo h1{
+	display: none;
+}
+.logo img{
+	width: 80px;
+	height: auto;
+}
+.mainNav ul li a{
+	font-size: 30px;
+	text-decoration: none;
+	padding: 20px;
+	color: black;
+	border: 1px solid transparent;
+	transition: color .5s,border .5s;
+}
+.mainNav a:hover{
+    color: #000;
+    border: 1px solid #fff;
+}
+.mainNav{
+	position: absolute;
+	top:0;
+	right: 0;
+}
+.mainNav ul li{
+	float: left;
+	margin: 20px 30px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+body{
+    color: white;
+}
+main section{
+	margin: 50px 0px;
+}
+main h2{
+	margin-bottom: 0px;
+}
+.fav li{
+	float: left;
+	 width: 160px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    background-color:rgba(100,100,200,.6);
+    margin: 20px;
+    cursor: pointer;
+    border-radius:10px;
+}
+.fav li:hover{
+	background-color:rgba(100,100,200,.8);
+	transition: all .5s;
+}
+.work{
+	margin: 0;
+	padding: 0;
+}
+.work figure img{
+	width:100%;
+	/*height: 250px;*/
+	float: left;
+	/*margin: 40px;*/
+   cursor: pointer;
+}
+.work figure{
+	width: 300px;
+	height: 250px;
+	float: left;
+	margin: 40px;
+   cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+.work figure figcaption{
+	width: 30px;
+	height: 10px;
+	position: absolute;
+	z-index: 3;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	text-align: center;
+	opacity: 0;
+	transition: opacity .5s;
+
+}
+.work figure:hover figcaption{
+	opacity: 1;
+}
+img{
+	-webkit-filter: grayscale(.8);
+	transition: all .5s;
+}
+.work figure:hover img{
+    -webkit-filter: grayscale(0);
+}
+.contactContainer dt{
+	padding: 5px 20px ;
+	display: inline-block;
+	background-color: #fff;
+	color: black;
+}
+.contactContainer dd{
+	display: inline-block;
+	margin: 0px 30px 0px 0px;
+	 background-color: #000;
+    color: #fff;
+
+}
+.contact input{
+	height: 35px;
+	width: 400px;
+	margin: 10px 10px 0px 0px;
+	border-radius: 3px;
+	border: none;
+}
+select{
+	height: 35px;
+	width: 200px;
+	border-radius: 3px;
+	border: none;
+}
+.contact textarea,
+.contact input[type="submit"]{
+    width: 40%;
+    height: 30px;
+    padding: 10px 16px;
+    border-radius: 3px;
+    margin: 10px 3% 5px 0px;
+    vertical-align: top;
+}
+.contact input[type="submit"]{
+	height: 51px;
+	 margin: 10px 0px;
+    border:none;
+    outline: none;
+    background-color: #00BFFF;
+    cursor: pointer;
+    color: white;
+}
+.contact input[type="submit"]:hover{
+	height: 51px;
+	 margin: 10px 0px;
+    border:none;
+    outline: none;
+    background-color:rgba(0,191,255,.6);
+    cursor: pointer;
+    transition: all .5s;
+}
