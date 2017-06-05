@@ -1,0 +1,159 @@
+*{
+	box-sizing: border-box;
+	font-family: "微软雅黑";
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+ul{
+	list-style-type: none;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+	padding: 1px;
+}
+body{
+	min-height: 1400px;
+}
+header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	width: 100%;
+	padding: 20px 0px;
+	background-color:rgba(0,0,0,0);
+	transition: background-color .5s,padding .5s;
+}
+header.on{
+	padding: 5px 0px;
+	background-color:rgba(0,0,0,.9);
+}
+header .logo{
+	float: left;
+}
+header .logo span,
+header .logo img{
+	vertical-align: middle;
+}
+header .logo span{
+	font-size: 3em;
+	font-family: 'Dancing Script', cursive;
+}
+header .topMenu{
+	float: right;
+}
+header .topMenu ul li{
+	float: left;
+	margin: 10px 20px;
+}
+header .topMenu a{
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+header .topMenu a:hover{
+	color: #339BEB;
+}
+.banner{
+	min-height: 800px;
+	background: url(../img/banner.jpg) no-repeat center top;
+}
+.banner .text{
+	max-width: 800px;
+	height: 180px;
+	color: #fff;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-shadow: 0px 2px 9px rgba(0,0,0,.5);
+	line-height: 1.5;
+} 
+.banner .text h1{
+	text-align: center;
+}
+.banner .text h1 strong{
+	color: #339BEB;
+}
+.banner .text p mark{
+	background-color: rgba(255,255,255,.5);
+	padding: 4px;
+	color: #000;
+}
+section h2{
+	text-align: center;
+	margin-top: 50px;
+}
+section h2+p{
+	text-align: center;
+	margin-bottom: 80px;
+}
+/*.about .img{
+	float: left;
+	width: 48%;
+}
+.about .img img{
+	width: 100%;
+	margin: auto;
+}
+.about .note{
+	float: left;
+}*/
+.about .img{
+	width: 49%;
+	float: left;
+}
+.about .img img{
+	width: 100%;
+	height: auto;
+}
+.about .note{
+	width: 49%;
+	float: right;
+	text-align: left;
+}
+.about .note p:first-child{
+	margin-top: 0px;
+}
+.about .note ul{
+	counter-reset:testname 0;
+}
+.about .note li{
+	counter-increment:testname 1;
+	position: relative;
+	padding-left: 2em;
+	cursor: pointer;
+	list-style: none;
+}
+.about .note li::before{
+	content:counter(testname);
+	width: 1.2em;
+	height: 1.2em;
+	border: 1px dashed #000;
+	text-align: center;
+	line-height: 1.2;
+	border-radius: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0.3em;
+	transition:transform .3s;
+	transform: translate(0px);
+}
+.about .note li:hover::before{
+	transform: translate(0.5em);
+}
+.about p{
+	line-height: 2;
+}
+.about .note li{
+	line-height: 2;
+}
