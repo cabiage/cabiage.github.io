@@ -7,7 +7,6 @@
     box-sizing: border-box;
 }
 body{
-    min-height: 1200px;
 	background: url(../img/banner.jpg) no-repeat center top;
 }
 .topMenu a{
@@ -17,8 +16,8 @@ body{
 }
 .topMenu a:hover{
 	color: #339BEB;
-	text-shadow: 2px 1px 1px rgba(0,0,0,.6);	
-	transition: all .6s;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);	
+	transition: all .3s;
 	
 }
 .topMenu{
@@ -56,7 +55,7 @@ body{
 .logo {
 	float: left;
 	margin: 16px auto 10px 200px;
-
+    color: white;
 }
 header{
 	width: 100%;
@@ -69,7 +68,7 @@ header{
 	transition: all .5s;
 }
 header.on{
-	padding: 10px 0;
+	padding: 20px 0;
 	background-color: rgba(0,0,0,.6);
 }
 h1 span {
@@ -144,11 +143,90 @@ section h2 {
 .note ul i{
 	display: block;
 	float: left;
-	margin: 7.5px 12px auto -20px;
+	margin: 5.5px 12px auto -20px;
 	font-size: 20px;
 	cursor: pointer;
 }
 .note ul i:hover{
-	margin: 7.5px 5px auto -20px;
+	margin: 5.5px 5px auto -20px;
 	transition: all .5s;
+	color: rgba(51,155,235,.8);;
+}
+.note{
+	position: relative;
+}
+.service{
+	height:600px;
+	background: url(../img/desktop.jpg) center center no-repeat;
+}
+.service p:nth-child(1){
+	font-size: 25px;
+    display: inline-block;
+	color: black;
+	margin-top: 30px;
+	margin-left:400px ;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.service strong{
+    color: black;	
+	font-style: normal;
+    display: inline-block;
+    margin-left: 330px;
+    margin-top: -30px;
+}
+.service p{
+	margin-top: -5px;
+}
+.service li{
+	float: left;
+	width: 48%;
+	margin-right: 4%;
+	text-align: right;
+	display: inline-block;
+}
+.service li::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.service li:nth-child(2n){
+	margin-right: 0px;
+	text-align: left;
+	
+}
+.service h3{
+	display: inline-block;
+	margin-left:10px ;
+	color: black;
+	font-family: "微软雅黑";
+	cursor: pointer;
+}
+.service li i{
+	float: right;
+	margin: 22px 33px 5px 15px;
+	color: black;
+}
+.service li:nth-child(2n) i{
+	float: left;
+	margin: 22px 4px 0 -21px;
+}
+.service ul li p{
+	width: 580px;
+	text-align: right;
+	float: left;
+	margin: 2px auto -2px 127px;
+	color: black;
+}
+.service ul li:nth-child(2n) p{
+	text-align: left;
+	float: left;
+    margin-left: -21px;
+    margin-right: 69px;
+}
+.service li:hover i{
+	cursor: pointer;
+	color: rgba(51,155,235,.8);
+	transition: all .5s;
+	height: 30px;
 }
