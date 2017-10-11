@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#clock{
+				top: 100px;
+				width: 600px;
+				height: 600px;
+				position: relative;
+				background: url(http://pic.58pic.com/58pic/16/22/64/01c58PIC4VS_1024.jpg);
+				margin: auto;
+			}
+			#hour{
+				width: 1.4%;
+				height: 18%;
+				background-color: #000;
+				position: absolute;
+				left: 49.5%;
+				top: 30%;
+				-webkit-transform-origin: 50% 100%;
+			}
+			#min{
+				width: 1%;
+				height: 26%;
+				background-color: #000;
+				position: absolute;
+				left: 49.9%;
+				top: 21%;
+				-webkit-transform-origin: 50% 100%;
+			}
+			#sec{
+				width: 0.6%;
+				height: 34%;
+				background-color: #f00;
+				position: absolute;
+				left: 49.8%;
+				top:14%;
+				-webkit-transform-origin: 50% 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="clock">
+			<div id="hour"></div>
+			<div id="min"></div>
+			<div id="sec"></div>
+		</div>
+		<script type="text/javascript">
+			var now;
+			var oClock=document.getElementById("clock");
+			var oHour=document.getElementById("hour");
+			var oMin=document.getElementById("min");
+			var oSec=document.getElementById("sec");
+			function runTime() {
+				now=new Date();
+				var sec=now.getSeconds()*6;
+				var min=(now.getMinutes()+now.getSeconds()/60)*6;
+				var hour=(now.getHours()+now.getMinutes()/60+now.getSeconds()/3600)*30;
+				oHour.style.webkitTransform="rotate("+hour+"deg)";
+				oMin.style.webkitTransform="rotate("+min+"deg)";
+				oSec.style.webkitTransform="rotate("+sec+"deg)";
+			}
+			setInterval("runTime()",100);
+		</script>
+	</body>
+</html>
