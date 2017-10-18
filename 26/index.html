@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				width: auto;
+			  height: auto;
+				background: url(img/01.jpg);
+			}
+			.title{
+				text-align: center;
+				line-height: 50px;
+				width: 500px;
+				height: 100px;
+				border:3px solid #fff;
+                background-color: rgba(0,0,0,0.6);
+                color: #FFFFFF;				
+				margin: 0 auto;
+			}
+			.k{
+				width: 1350px;
+				margin: 100px auto;
+			}
+			input[type="button"]{
+				margin: 10px;
+				width: 200px;
+				height: 100px;
+				background:rgba(0,0,0,0.6);
+				color: #fff;
+				font-size: 2em;
+				cursor: pointer;
+			}
+			input[type="button"]:hover{
+				background-color: white;
+				color: black;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="k">
+			<input type="button" value="1" />
+			<input type="button" value="2" />
+			<input type="button" value="3" />
+			<input type="button" value="4" />
+			<input type="button" value="5" />
+			<input type="button" value="6" />
+		</div>
+		<script type="text/javascript">
+			var oBtnList=document.querySelectorAll(".k input");
+			for ( var i = 0; i < oBtnList.length; i++ ) {
+				oBtnList[ i ].addEventListener("click",(function(index){
+					return function(e){
+						console.log( '你选了第' + index +"个爸爸" )
+						alert('你选了第' + index +"个爸爸");
+					};
+				}(i+1)));
+			}
+		</script>
+</body>
+</html>
