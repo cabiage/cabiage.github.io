@@ -1,0 +1,35 @@
+
+<html>
+    <head>
+        <title>15</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <style>
+            #marquee p{height:50px;line-height:50px;margin:0}
+        </style>
+        <div style="height:50px;overflow:hidden;">
+            <div id='marquee'>
+                <p>芒果</p>
+                <p>葡萄</p>
+            </div>
+        </div>
+ 
+        <script>
+            (function(){
+                var marquee = document.getElementById('marquee');
+                var offset=0;
+                var scrollheight =marquee.offsetHeight;
+                var firstNode = marquee.children[0].cloneNode(true);
+                marquee.appendChild(firstNode);
+                setInterval(function(){
+                    if(offset == scrollheight){
+                        offset = 0;
+                    }
+                    marquee.style.marginTop = "-"+offset+"px";
+                    offset += 1;
+                },50);
+            })();
+        </script>
+    </body></html>
